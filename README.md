@@ -21,8 +21,8 @@ Or install it yourself as:
 ```ruby
 require 'instead_of'
 
-(2 + 2).but("abc".instead_of(3) # 4 is unchanged
-(2 + 2).but(4.instead_of(3), 5.instead_of(4)) # 4 replaced with 5
+(2 + 2).but "abc".instead_of(3) # =>4, it is not replaced with anything
+(2 + 2).but 4.instead_of(3), 5.instead_of(4) # => 5, because 4 is replaced with 5
 ```
 
 ## Contributing
