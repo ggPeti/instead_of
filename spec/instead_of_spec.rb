@@ -17,4 +17,9 @@ describe "instead_of" do
     expect((2 + 2).but(6.instead_of(3), 7.instead_of(4))).to eq(7)
   end
 
+
+  it "should replace NaN" do
+    expect((0.0 / 0.0).but(1.instead_of(Float::NAN))).to eq(1)
+  end
+
 end
